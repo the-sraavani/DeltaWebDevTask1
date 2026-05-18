@@ -10,73 +10,152 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <meta
-        name="description"
-        content="Chain Reaction strategy game built using HTML, CSS and JavaScript."
-    >
+    <title>
+        * CHAIN REACTION *
+    </title>
 
     <link
-        rel="icon"
-        href="favicon.ico"
+        rel="stylesheet"
+        href="style.css"
     >
-
-    <title>Chain Reaction</title>
-
-    <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-    <h1>Chain Reaction</h1>
+    <h1>* CHAIN REACTION *</h1>
+
+    <!-- STARTUP POPUP -->
+
+    <div id="startupPopup">
+
+        <div id="popupContent">
+
+            <h2>CHOOSE BOARD SIZE</h2>
+
+            <p style="font-size:8px; color:#ff6bab; margin:8px 0 14px; font-family:'Press Start 2P',monospace;">
+                enter rows and columns
+            </p>
+
+            <input
+                type="number"
+                id="rowsInput"
+                placeholder="ROWS"
+                min="4"
+                max="20"
+            >
+
+            <input
+                type="number"
+                id="colsInput"
+                placeholder="COLS"
+                min="4"
+                max="20"
+            >
+
+            <br><br>
+
+            <button id="customBoardBtn">
+                &gt; CUSTOM
+            </button>
+
+            <button id="defaultBoardBtn">
+                &gt; DEFAULT
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- CONTROLS -->
 
     <div id="controls">
 
         <button id="pvpBtn">
-            2 Player
+            &gt; 2 PLAYER
         </button>
 
         <button id="aiBtn">
-            Player vs AI
+            &gt; VS AI
         </button>
+
+        <br><br>
 
         <input
             type="number"
             id="playerCountInput"
+            placeholder="PLAYERS (2-8)"
             min="2"
             max="8"
-            value="4"
+        >
+
+        <input
+            type="text"
+            id="playerNamesInput"
+            placeholder="NAMES, COMMA SEP."
         >
 
         <button id="customMultiBtn">
-            Start Multiplayer
+            &gt; MULTIPLAYER
+        </button>
+
+        <br><br>
+
+        <button id="pauseBtn">
+            &#9646;&#9646; PAUSE
+        </button>
+
+        <button id="resumeBtn">
+            &#9654; RESUME
         </button>
 
     </div>
 
-    <h2 id="turnText"></h2>
+    <!-- STATUS -->
 
-    <h3 id="scoreText"></h3>
+    <h2 id="turnDisplay">PLAYER 1'S TURN</h2>
 
-    <h3 id="timerText"></h3>
+    <h3 id="timerDisplay">GAME: 300s | TURN: 15s</h3>
 
-    <button id="pauseBtn">
-        Pause
-    </button>
+    <h3 id="scoreDisplay">SCORES</h3>
 
-    <button id="resumeBtn">
-        Resume
-    </button>
-
-    <div id="history"></div>
+    <!-- BOARD -->
 
     <div id="board"></div>
 
+    <!-- REPLAY CONTROLS -->
+
+    <div id="replayControls">
+
+        <button id="undoBtn">
+            &lt; UNDO
+        </button>
+
+        <button id="redoBtn">
+            REDO &gt;
+        </button>
+
+        <button id="playReplayBtn">
+            &#9654; REPLAY
+        </button>
+
+        <button id="pauseReplayBtn">
+            &#9646;&#9646; STOP
+        </button>
+
+    </div>
+
+    <!-- HISTORY -->
+
+    <div id="history"></div>
+
+    <!-- SCRIPTS -->
+
     <script src="state_manager.js"></script>
 
-    <script src="game_engine.js"></script>
-
     <script src="ui_controller.js"></script>
+
+    <script src="game_engine.js"></script>
 
     <script src="event_handler.js"></script>
 
