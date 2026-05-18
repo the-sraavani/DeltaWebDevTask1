@@ -21,6 +21,8 @@ let currentPlayer =
 
 let moveCount = 0;
 
+let scores = {};
+
 let totalTime = 300;
 
 let turnTime = 15;
