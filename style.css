@@ -1,0 +1,243 @@
+body {
+    background: #111;
+    color: white;
+    font-family: Arial;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+    overflow-x: hidden;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+#controls {
+    margin-bottom: 15px;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(12, 50px);
+    gap: 2px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.cell {
+    width: 50px;
+    height: 50px;
+    background: #222;
+    border: 1px solid #555;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cell:hover {
+    transform: scale(1.05);
+}
+
+.redCell {
+    border-color: red;
+}
+
+.blueCell {
+    border-color: blue;
+}
+
+.greenCell {
+    border-color: lime;
+}
+
+.yellowCell {
+    border-color: yellow;
+}
+
+.purpleCell {
+    border-color: purple;
+}
+
+.orangeCell {
+    border-color: orange;
+}
+
+.pinkCell {
+    border-color: hotpink;
+}
+
+.cyanCell {
+    border-color: cyan;
+}
+
+/* ORBS */
+
+.orb-container {
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+
+.orb {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 100;
+}
+
+.redOrb {
+    background: red;
+}
+
+.blueOrb {
+    background: blue;
+}
+
+.greenOrb {
+    background: lime;
+}
+
+.yellowOrb {
+    background: yellow;
+}
+
+.purpleOrb {
+    background: purple;
+}
+
+.orangeOrb {
+    background: orange;
+}
+
+.pinkOrb {
+    background: hotpink;
+}
+
+.cyanOrb {
+    background: cyan;
+}
+
+.orb1 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.orb2a {
+    top: 35%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+}
+
+.orb2b {
+    top: 65%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+}
+
+.orb3a {
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.orb3b {
+    top: 65%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+}
+
+.orb3c {
+    top: 65%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+}
+
+.orb4a {
+    top: 30%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+}
+
+.orb4b {
+    top: 30%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+
+.orb4c {
+    top: 70%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+}
+
+.orb4d {
+    top: 70%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+
+#history {
+    margin-top: 20px;
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 10px;
+    border: 1px solid #444;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    background: #1a1a1a;
+}
+
+button {
+    margin: 5px;
+    padding: 10px 16px;
+    background: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+button:hover {
+    background: #555;
+}
+
+input {
+    padding: 8px;
+    width: 60px;
+    background: #222;
+    color: white;
+    border: 1px solid #555;
+}
+
+@media (max-width: 800px) {
+
+    #board {
+        grid-template-columns: repeat(12, 32px);
+    }
+
+    .cell {
+        width: 32px;
+        height: 32px;
+    }
+
+    .orb-container {
+        width: 32px;
+        height: 32px;
+    }
+
+    .orb {
+        width: 10px;
+        height: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}
